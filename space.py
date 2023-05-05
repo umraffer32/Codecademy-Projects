@@ -37,3 +37,5 @@ elif planet == 6:
   rounded_number = round(weight, 2)
   print ("On Neptune, you weigh " + str(weight))
   print ("On Neptune, you weigh " + str(rounded_number)) 
+  
+# To show rounded and rounded numbers.
