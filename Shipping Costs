@@ -1,0 +1,35 @@
+weight = float(input("Enter the package weight in lbs: "))
+flat_fee = 20
+premium = 125
+
+# Ground Shipping
+if weight <= 2:
+  cost_ground = flat_fee + (weight * 1.5)
+elif weight > 2 and weight <= 6:
+  cost_ground = flat_fee + (weight * 3)
+elif weight > 6 and weight <= 10:
+  cost_ground = flat_fee + (weight * 4)
+else:
+  cost_ground = flat_fee + (weight * 4.75) 
+print(f'Ground Shipping Premium Cost: ${premium:.2f}')   
+print(f'Ground Shipping Cost: ${cost_ground:.2f}') 
+
+
+# Drone Shipping
+if weight <= 2:
+  cost_drone = (weight * 4.5)
+elif weight > 2 and weight <= 6:
+  cost_drone = (weight * 9)
+elif weight > 6 and weight <= 10:
+  cost_drone = (weight * 12)
+else:
+  cost_drone = (weight * 14.25)
+print(f'Drone Shipping Cost: ${cost_drone:.2f}')  
+
+cheapest = min(cost_ground, cost_drone, premium)
+if cheapest == cost_ground:
+  print(f'The cheapest shipping option is Ground Shipping at ${cost_ground:.2f}')
+elif cheapest == cost_drone:
+  print(f'The cheapest shipping option is Drone Shipping at ${cost_drone:.2f}')
+else:
+  print(f'The cheapest shipping option is Premium Shipping at ${premium:.2f}')
