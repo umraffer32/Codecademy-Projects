@@ -1,0 +1,51 @@
+##### List of toppings: ####
+toppings = [
+  'pepperoni',
+  'pineapple',
+  'cheese',
+  'sausage',
+  'olives',
+  'anchovies',
+  'mushrooms'
+]
+##### List of prices: ####
+prices = [2, 6, 1, 3, 2, 7, 2]
+#### Count the number of occurences of $2 slices ####
+num_two_dollar_slices = prices.count(2)
+#### Find the length of the toppings list ####
+num_pizzas = len(toppings)
+### Use formatted string to print num_pizzas ####
+print(f'We sell {num_pizzas} different kinds of pizza!')
+#### Create a 2D list called pizza_and_prices ####
+pizza_and_prices = [
+  [2, 'pepperoni'],
+  [6, 'pineapple'],
+  [1, 'cheese'],
+  [3, 'sausage'],
+  [2, 'olives'],
+  [7, 'anchovies'],
+  [2, 'mushrooms']
+]
+#### Print pizza_and_prices ####
+print(pizza_and_prices)
+#### Sort pizza_and_prices in ascending order ####
+pizza_and_prices.sort()
+#### Store the 1st element of pizza_and_prices in a variable ####
+cheapest_pizza = pizza_and_prices[0]
+#### Store last element ####
+priciest_pizza = pizza_and_prices[-1]
+#### Remove anchovies from the list ####
+pizza_and_prices.pop()
+#### Add peppers at 2.5 a slice ####
+pizza_and_prices.insert(4, [2.5, 'peppers'])
+#### Store the 3 lowest priced pizzas ####
+three_cheapest = pizza_and_prices[0:3]
+
+
+#print(three_cheapest)
+#print(pizza_and_prices)
+#print(priciest_pizza)
+#print(num_pizzas)
+#print(num_two_dollar_slices)
+#print(toppings)
+#print(prices)
